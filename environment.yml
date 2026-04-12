@@ -1,28 +1,24 @@
-name: aml2026-group-15
+# Note: name can be changed
+name: "base"
 channels:
-  - pytorch
-  - nvidia
+	# important: do not use 'defaults', but always include 'nodedefaults'
   - conda-forge
-  - defaults
+  - nodefaults
 dependencies:
-  - python=3.10
-  - pip
-  - pandas
-  - numpy
+  - python=3.9 # set your python version here
+  - tensorflow-gpu
+  - numba
   - scikit-learn
-  - tqdm
-  - ipykernel
+  - pandas
+  - seaborn
+  - matplotlib
   - jupyterlab
-  - pathlib
-  # Deep Learning requirements for SciBERT
-  - pytorch
-  - torchvision
-  - torchaudio
-  - pytorch-cuda=11.8
+  - xarray
+  - pip
   - pip:
-      - transformers[torch] # For SciBERT
-      - datasets
-      - accelerate
-      - rank_bm25            # For the BM25 Baseline
-      - evaluate
-      - sentencepiece
+	  # put packages to be installed by pip here
+    - deepsmiles
+    - rdkit
+    - rank_bm25
+# Note: prefix can be changed
+prefix: "/opt/conda"
