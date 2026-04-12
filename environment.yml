@@ -1,0 +1,28 @@
+name: aml2026-group-15
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pandas
+  - numpy
+  - scikit-learn
+  - tqdm
+  - ipykernel
+  - jupyterlab
+  - pathlib
+  # Deep Learning requirements for SciBERT
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=11.8
+  - pip:
+      - transformers[torch] # For SciBERT
+      - datasets
+      - accelerate
+      - rank_bm25            # For the BM25 Baseline
+      - evaluate
+      - sentencepiece
