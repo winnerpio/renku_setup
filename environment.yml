@@ -1,20 +1,24 @@
-name: "base"
+name: "aml2026-group-15"
 channels:
   - conda-forge
+  - pytorch
+  - nvidia
   - nodefaults
 dependencies:
-  - python=3.9 # set your python version here
-  - tensorflow-gpu
-  - numba
+  - python=3.10
+  - pip
+  - pytorch
+  - pytorch-cuda=11.8
+  - tmux
+  - ncurses>=6.4
   - scikit-learn
   - pandas
   - seaborn
   - matplotlib
   - jupyterlab
-  - xarray
-  - pip
+  - tqdm
   - pip:
-    - deepsmiles
-    - rdkit
-    - rank_bm25
-prefix: "/opt/conda"
+      - transformers[torch]
+      - rank_bm25
+      - accelerate
+      - datasets
