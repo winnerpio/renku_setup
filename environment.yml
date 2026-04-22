@@ -1,13 +1,15 @@
 name: "aml2026-group-15"
 channels:
-  - conda-forge
   - pytorch
-  - nvidia
+  - nvidia           
+  - conda-forge
   - nodefaults
 dependencies:
   - python=3.10
   - pip
   - pytorch
+  - torchvision
+  - torchaudio
   - pytorch-cuda=11.8
   - scikit-learn
   - pandas
@@ -16,7 +18,7 @@ dependencies:
   - jupyterlab
   - tqdm
   - pip:
-      - transformers[torch] # Required for SciBERT
-      - rank_bm25            # Required for BM25 Baseline
-      - accelerate          # Required for training schedule
+      - transformers[torch]
+      - rank_bm25
+      - accelerate
       - datasets
