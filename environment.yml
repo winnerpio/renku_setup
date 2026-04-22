@@ -18,7 +18,7 @@ dependencies:
   - jupyterlab
   - tqdm
   - pip:
-      - transformers[torch]
+      - transformers
       - rank_bm25
       - accelerate
       - datasets
